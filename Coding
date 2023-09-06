@@ -13,3 +13,7 @@ export function singleNumber(nums) {
         }
         return result
 }
+
+
+//add copyright 
+<p>&copy;2022 Codedamn.</p>
