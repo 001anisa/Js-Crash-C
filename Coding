@@ -1,0 +1,15 @@
+Given an array of integers (nums), your task is to find the single element that appears only once in the array. All the other elements appear twice in the array.solve in linear time.
+solution:
+     /**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+export function singleNumber(nums) {
+    let result=0
+        for(const i of nums)
+        {
+           result^=i
+        }
+        return result
+}
