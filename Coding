@@ -17,3 +17,32 @@ export function singleNumber(nums) {
 
 //add copyright 
 <p>&copy;2022 Codedamn.</p>
+
+
+//hover count in react 
+import { useState } from "react"
+
+const App = () => {
+	// Edit this component
+    const [count,setCount] =useState(0)
+    
+    const handleHover=()=>
+    {
+        setCount(count+1)
+    }
+    
+	return (
+		<div>
+			<button data-testid="button" onMouseOver={handleHover}>Hover Me</button>
+			<h1 data-testid="count">{count}</h1>
+		</div>
+	)
+}
+
+export default App
+
+Explanation:
+useState(0) - This is a call to the useState hook. The useState hook is a built-in React hook that allows functional components to manage state. It takes an initial state value as its argument. In this case, the initial state value is 0, meaning we're initializing the count state variable with a value of 0.
+const [count, setCount] - This line uses destructuring assignment to declare two variables: count and setCount. These names are arbitrary and can be chosen as you like, but they are commonly used to describe a state variable and a function to update that state variable.
+count is the current value of the state variable. It holds the current state of your component.
+setCount is a function that allows you to update the state variable count. When you call setCount(newValue), it updates the count to newValue, and React re-renders the component with the new state.
