@@ -46,3 +46,14 @@ useState(0) - This is a call to the useState hook. The useState hook is a built-
 const [count, setCount] - This line uses destructuring assignment to declare two variables: count and setCount. These names are arbitrary and can be chosen as you like, but they are commonly used to describe a state variable and a function to update that state variable.
 count is the current value of the state variable. It holds the current state of your component.
 setCount is a function that allows you to update the state variable count. When you call setCount(newValue), it updates the count to newValue, and React re-renders the component with the new state.
+
+
+// find a missing number from array
+export const missingNumber = function (nums) {
+    let temp = (nums.length*(nums.length+1))/2;
+    let total = nums.reduce((a,i)=> a+i,0);  //def is given below
+    
+    return temp-total;
+}
+Syntax:
+array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
